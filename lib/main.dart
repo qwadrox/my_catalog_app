@@ -131,6 +131,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   FirebaseCrashlytics.instance.crash();
                 },
                 child: Text('Crash app (for testing purposes only)')),
+            ElevatedButton(
+                onPressed: () {
+                  FirebaseCrashlytics.instance.recordError("This is an exception", StackTrace.current);
+                },
+                child: Text('Crash app (for testing purposes only)')),
  
             Text(
               '$_counter',
