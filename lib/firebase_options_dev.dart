@@ -60,4 +60,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'my-cool-catalog-app.appspot.com',
     iosBundleId: 'com.example.myCatalogApp.dev',
   );
+
 }
