@@ -1,1 +1,30 @@
-{"flutter":{"platforms":{"ios":{"buildConfigurations":{"Debug-dev":{"projectId":"my-cool-catalog-app","appId":"1:294278954642:ios:a07abe40524feede45f04b","uploadDebugSymbols":true,"fileOutput":"ios/dev/GoogleService-Info.plist"},"Release-dev":{"projectId":"my-cool-catalog-app","appId":"1:294278954642:ios:a07abe40524feede45f04b","uploadDebugSymbols":true,"fileOutput":"ios/dev/GoogleService-Info.plist"}}},"dart":{"lib/firebase_options_dev.dart":{"projectId":"my-cool-catalog-app","configurations":{"ios":"1:294278954642:ios:a07abe40524feede45f04b"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "ios": {
+        "buildConfigurations": {
+          "Debug-dev": {
+            "projectId": "my-cool-catalog-app",
+            "appId": "1:294278954642:ios:a07abe40524feede45f04b",
+            "uploadDebugSymbols": true,
+            "fileOutput": "ios/dev/GoogleService-Info.plist"
+          },
+          "Release-dev": {
+            "projectId": "my-cool-catalog-app",
+            "appId": "1:294278954642:ios:a07abe40524feede45f04b",
+            "uploadDebugSymbols": true,
+            "fileOutput": "ios/dev/GoogleService-Info.plist"
+          }
+        }
+      },
+      "dart": {
+        "lib/firebase_options_dev.dart": {
+          "projectId": "my-cool-catalog-app",
+          "configurations": {
+            "ios": "1:294278954642:ios:a07abe40524feede45f04b"
+          }
+        }
+      }
+    }
+  }
+}

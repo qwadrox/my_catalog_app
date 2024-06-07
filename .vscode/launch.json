@@ -9,7 +9,7 @@
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
-             "args": ["--flavor", "dev"],
+             "args": ["--flavor", "prod", "--verbose"],
         },
         {
             "name": "my_catalog_app (profile mode)",

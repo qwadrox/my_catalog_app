@@ -1,27 +1,26 @@
 import 'dart:ui';
 
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:my_catalog_app/firebase_options_dev.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  FlutterError.onError = (errorDetails) {
-    FirebaseCrashlytics.instance.recordFlutterError(errorDetails);
-  };
-
-  PlatformDispatcher.instance.onError = (error, stack) {
-    FirebaseCrashlytics.instance.recordError(error, stack);
-    return true;
-  };
   
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
+  Firebase.apps.forEach((element) {
+    print('App name: ${element.name}');
+  });
 
+  FirebaseMessaging.instance.getToken().then((value) {
+    print('Token: $value');
+  });
   runApp(const MyApp());
 }
 
@@ -126,16 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            ElevatedButton(
-                onPressed: () {
-                  FirebaseCrashlytics.instance.crash();
-                },
-                child: Text('Crash app (for testing purposes only)')),
-            ElevatedButton(
-                onPressed: () {
-                  FirebaseCrashlytics.instance.recordError("This is an exception", StackTrace.current);
-                },
-                child: Text('Crash app (for testing purposes only)')),
+           
  
             Text(
               '$_counter',
